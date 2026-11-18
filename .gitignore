@@ -6,8 +6,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# PDF 输出（可由脚本生成）
+# 编译输出（可由脚本生成）
 *.pdf
+*.epub
 
 # 二维码（私有资源）
 qrcode.jpg

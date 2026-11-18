@@ -123,17 +123,32 @@ Hermes Agent 是目前开源社区最具潜力的 AI Agent 框架之一。它继
 
 ---
 
-## PDF 生成
+## 电子书导出（EPUB 与 PDF）
 
-本书附带 Python 脚本，可将 Markdown 转换为精美 PDF：
+本书附带自动化脚本，支持导出为精美 EPUB 电子书或 PDF 文档：
+
+### 1. 导出 EPUB（推荐，适合微信读书、Apple Books、Kindle、手机及阅读器）
 
 ```bash
-pip install markdown weasyprint
+pip install markdown ebooklib
+python generate_epub.py
+```
+
+或使用 `uv` 免手动装包直接运行：
+```bash
+uv run --with markdown --with ebooklib python3 generate_epub.py
+```
+
+导出的 EPUB 文件：`Hermes-Agent白皮书-养马从入门到精通-鲲鹏Talk.epub`
+
+### 2. 导出 PDF
+
+```bash
+pip install markdown pymdown-extensions weasyprint
 python generate_pdf.py
 ```
 
-生成的 PDF 文件：`Hermes-Agent白皮书-养马从入门到精通-鲲鹏Talk.pdf`
-
+导出的 PDF 文件：`Hermes-Agent白皮书-养马从入门到精通-鲲鹏Talk.pdf`
 ---
 
 ## 许可协议

@@ -551,8 +551,9 @@ def generate_pdf(input_dir, output_path):
 
 
 if __name__ == '__main__':
-    input_directory = '/Users/jwangkun/Test/hermes/whitepaper'
-    output_file = '/Users/jwangkun/Test/hermes/whitepaper/Hermes-Agent白皮书-养马从入门到精通-鲲鹏Talk.pdf'
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_directory = os.getenv('INPUT_DIR', script_dir)
+    output_file = os.getenv('OUTPUT_FILE', os.path.join(script_dir, 'Hermes-Agent白皮书-养马从入门到精通-鲲鹏Talk.pdf'))
     
     try:
         generate_pdf(input_directory, output_file)
